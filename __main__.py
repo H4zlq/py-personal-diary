@@ -14,10 +14,10 @@ def main():
             entry = entry_diary()
             content = f"{datetime}: {entry}\n"
 
-            if append_file(f"{username}-diary.txt", content):
+            if append_file(f"diarys/{username}-diary.txt", content):
                 print("Successfully added diary.")
         elif choice == 2:
-            entry = read_file(f"{username}-diary.txt")
+            entry = read_file(f"diarys/{username}-diary.txt")
 
             if entry:
                 print(entry)
